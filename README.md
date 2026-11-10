@@ -1,11 +1,31 @@
-# José Ángel Sifuentes Maltos — Portafolio
+# José Ángel Sifuentes Maltos — Portafolio profesional
 
-Portafolio independiente de NEXUS. Perfil: **Ingeniero Ambiental | EHS | Seguridad y Salud Ocupacional | Gestión Ambiental | Docencia e Innovación Educativa**.
+**Ingeniero Ambiental | Seguridad, Salud Ocupacional y Medio Ambiente (EHS) | Gestión ambiental | Mejora continua**
 
-## Publicar
-En GitHub abre Settings → Pages → Deploy from a branch → main → /(root) → Save.
+Sitio profesional independiente que presenta trayectoria, formación complementaria, competencias técnicas y una selección de proyectos de ingeniería y desarrollo digital.
 
-URL: https://angelmaltos03-alt.github.io/jose-angel-sifuentes-portfolio_CV/
+## Sitio publicado
 
-Archivos: index.html, styles.css, app.js y assets/angel-sifuentes.jpg.
-La sección de innovación presenta el desarrollo de páginas web, simuladores, actividades gamificadas y recursos interactivos para INSUNTE.
+https://angelmaltos03-alt.github.io/jose-angel-sifuentes-portfolio_CV/
+
+## Secciones
+
+- Perfil profesional y enfoque de trabajo.
+- Experiencia y responsabilidades por etapa.
+- Formación complementaria, con categorías y búsqueda.
+- Competencias técnicas y de gestión.
+- Formación académica.
+- Proyectos seleccionados: SAFETYOS, NEXUS Control Tower, Sherlock Vision y Angel Dev Framework.
+- Datos de contacto y enlaces profesionales.
+
+## Tecnologías
+
+HTML, CSS y JavaScript sin dependencias de ejecución. Diseño adaptable a escritorio y dispositivos móviles, navegación accesible, filtros interactivos, animaciones con respeto a preferencias de movimiento y hoja de impresión para guardar el perfil como PDF.
+
+## Publicación
+
+GitHub Pages desde la rama `main`, directorio raíz `/`.
+
+## Alcance y transparencia
+
+Los indicadores de NEXUS son escenarios simulados para demostración. Algunas funciones de Sherlock Vision dependen de credenciales y servicios externos. Los registros de formación se presentan como formación complementaria y no implican que todos sean certificaciones vigentes.

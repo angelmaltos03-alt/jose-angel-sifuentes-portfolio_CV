@@ -159,8 +159,8 @@ h1>span:first-of-type{color:var(--lime)}
 .skill-pill:hover{border-color:var(--lime);color:var(--lime);background:rgba(200,241,105,.06)}
 .education-section{padding-top:10px;padding-bottom:130px}
 .education-card{margin-top:34px;padding:35px 38px;background:var(--paper);color:var(--ink);display:grid;grid-template-columns:110px 1fr auto;align-items:center;gap:28px}
-.education-emblem{width:82px;height:82px;border:1px solid rgba(17,20,29,.18);border-radius:50%;display:grid;place-items:center;font:700 27px var(--display);letter-spacing:-3px}
-.education-emblem span{color:#8eaa39}
+.education-emblem{width:104px;height:104px;object-fit:contain;display:block;border-radius:50%;mix-blend-mode:multiply;background:#fff;box-shadow:0 0 0 1px rgba(17,20,29,.10);padding:3px}
+
 .education-copy .section-overline{color:#657d32;margin-bottom:7px}
 .education-copy h3{font:600 28px var(--display);letter-spacing:-.05em}
 .education-copy p{font-size:12px;margin-top:5px;color:#555b63}

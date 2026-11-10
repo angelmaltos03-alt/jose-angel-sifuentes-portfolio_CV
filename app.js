@@ -316,3 +316,34 @@ setupMotion();
     card.addEventListener("pointerleave",()=>card.classList.remove("is-hovered"));
   });
 })();
+
+
+/* Portfolio case-study filters */
+(function setupProjectFilters(){
+ const root=document.getElementById("projectGrid");
+ const toolbar=document.querySelector(".project-filters");
+ const count=document.getElementById("projectCount");
+ if(!root||!toolbar||!count)return;
+ const cards=[...root.querySelectorAll("[data-project-category]")];
+ const buttons=[...toolbar.querySelectorAll("[data-project-filter]")];
+ const labels={all:"PROYECTOS",safety:"EHS & SAFETY",education:"EDTECH",operations:"OPERACIONES",software:"SOFTWARE"};
+ function apply(filter){
+  let visible=0;
+  cards.forEach(card=>{
+   const show=filter==="all"||card.dataset.projectCategory===filter;
+   card.hidden=!show;
+   if(show)visible++;
+  });
+  buttons.forEach(button=>{
+   const active=button.dataset.projectFilter===filter;
+   button.classList.toggle("active",active);
+   button.setAttribute("aria-pressed",String(active));
+  });
+  count.textContent=String(visible).padStart(2,"0")+" "+(labels[filter]||"PROYECTOS");
+ }
+ toolbar.addEventListener("click",event=>{
+  const button=event.target.closest("[data-project-filter]");
+  if(button)apply(button.dataset.projectFilter);
+ });
+ apply("all");
+})();

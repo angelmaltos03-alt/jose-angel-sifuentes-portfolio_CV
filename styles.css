@@ -337,3 +337,81 @@ h1>span:first-of-type{color:var(--lime)}
 @media(print){.portrait-visual{display:none!important}}
 
 .innovation-section{padding:20px 0 130px}.innovation-layout{display:grid;grid-template-columns:1.06fr .94fr;gap:65px;margin-top:46px}.innovation-eyebrow{font:9px var(--mono);letter-spacing:.14em;color:var(--lime);margin-bottom:17px}.innovation-statement h3{font:600 clamp(28px,3.2vw,43px)/1.14 var(--display);letter-spacing:-.05em}.innovation-statement h3 em{font-style:normal;color:var(--lime)}.innovation-statement>p:last-child{font-size:12px;color:#aeb5c1;line-height:1.95;margin-top:22px}.innovation-features{border-top:1px solid #ffffff24}.innovation-features>div{display:grid;grid-template-columns:34px 1fr;gap:3px 12px;padding:15px 0;border-bottom:1px solid #ffffff20}.innovation-features>div>span{grid-row:span 2;font:10px var(--mono);color:var(--lime)}.innovation-features b{font-size:12px}.innovation-features small{font-size:10px;color:#929baa}.innovation-tools{display:flex;gap:8px;flex-wrap:wrap;margin-top:36px}.innovation-tools span{font:9px var(--mono);color:#d9ddea;border:1px solid #a89aff55;background:#a89aff0b;padding:8px 11px}.innovation-projects{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-top:25px}.innovation-project{min-height:170px;padding:20px;background:#1a1f2c;border:1px solid #ffffff18;display:flex;flex-direction:column}.innovation-project>span{font:8px var(--mono);color:var(--lime)}.innovation-project h4{font:600 18px var(--display);margin-top:18px}.innovation-project p{font-size:10px;color:#9ca5b4;margin-top:8px;flex:1}.innovation-project a{font-size:10px;color:var(--lime);margin-top:12px}@media(max-width:700px){.innovation-layout{grid-template-columns:1fr;gap:28px}.innovation-projects{grid-template-columns:1fr}.innovation-section{padding-bottom:80px}}
+
+
+/* ── 2026 Portfolio refinement: editorial, immersive and responsive ── */
+:root{--max:1240px;--lime:#c9f36a;--violet:#a99bff;--ink:#0b101a;--ink-2:#121a28}
+body{background:radial-gradient(ellipse at 78% 7%,rgba(76,91,139,.16),transparent 31%),radial-gradient(ellipse at 8% 35%,rgba(146,170,82,.07),transparent 26%),var(--ink)}
+.site-header{height:78px;background:rgba(9,14,23,.82);border-bottom-color:rgba(255,255,255,.075)}
+.brand-mark{font-size:30px}
+.main-nav{gap:27px}
+.main-nav a{font-size:10px;letter-spacing:.06em;text-transform:uppercase}
+.main-nav a.active{color:var(--lime)}
+.hero{padding-top:76px}
+.hero-grid{gap:clamp(35px,6vw,86px);min-height:610px}
+.hero-copy{position:relative;z-index:2}
+h1{font-size:clamp(54px,7.3vw,100px);line-height:.94}
+.hero-description{font-size:14px;max-width:525px}
+.eyebrow{letter-spacing:.16em}
+.hero-visual{border-radius:3px;min-height:590px;background:linear-gradient(145deg,#1a2435,#101722);box-shadow:0 34px 100px rgba(0,0,0,.38),0 0 0 1px rgba(201,243,106,.08);transition:transform .25s ease}
+.portrait-photo{object-position:center 28%}
+.portrait-caption strong{font-size:clamp(30px,3.7vw,47px)}
+.portrait-stamp{width:60px;height:60px}
+.button{min-height:51px;padding-inline:22px;border-radius:3px}
+.button-primary{box-shadow:0 9px 28px rgba(201,243,106,.13)}
+.button-primary:hover{box-shadow:0 12px 35px rgba(201,243,106,.23)}
+.intro-section{padding-top:145px}
+.intro-layout{gap:clamp(45px,9vw,130px)}
+.intro-copy p{font-size:14px;color:#c0c6d1}
+.now-panel{border-radius:3px;background:linear-gradient(105deg,rgba(201,243,106,.075),rgba(255,255,255,.018));border-color:rgba(255,255,255,.11);padding:28px 32px}
+.metric-card{border-radius:3px;transition:transform .3s ease,box-shadow .3s ease;min-height:205px}
+.metric-card:hover{transform:translateY(-6px);box-shadow:0 18px 45px rgba(0,0,0,.2)}
+.metric-lime{background:linear-gradient(145deg,#d4fa83,#b5e653)}
+.metric-violet{background:linear-gradient(145deg,#c1b7ff,#9988f0)}
+.section-heading{margin-bottom:12px}
+.section-heading h2,.intro-heading h2{letter-spacing:-.075em}
+.tl-item{padding-block:27px;border-bottom-color:rgba(255,255,255,.09)}
+.tl-item:hover,.tl-item.active{background:linear-gradient(90deg,rgba(201,243,106,.055),transparent);border-left:2px solid var(--lime)}
+.tl-role{font-size:19px}
+.tl-summary{font-size:11px;line-height:1.8}
+.cert-grid{gap:10px}
+.cert-card{border-radius:3px;min-height:120px;padding:20px;background:linear-gradient(145deg,#192333,#121a27);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+.cert-card:hover{transform:translateY(-5px);box-shadow:0 15px 32px rgba(0,0,0,.22);border-color:rgba(201,243,106,.55)}
+.skill-group{border-radius:3px;background:linear-gradient(145deg,#182232,#111925);transition:transform .25s,border-color .25s}
+.skill-group:hover{transform:translateY(-4px);border-color:rgba(201,243,106,.35)}
+.skill-pill{padding:8px 11px}
+.education-card{border-radius:3px;padding:38px 42px;grid-template-columns:120px 1fr auto;box-shadow:0 22px 55px rgba(0,0,0,.2)}
+.education-emblem{width:110px;height:110px}
+.innovation-project{border-radius:3px;position:relative;overflow:hidden;transition:transform .25s,border-color .25s,background .25s}
+.innovation-project:before{content:"";position:absolute;inset:0;background:linear-gradient(130deg,rgba(201,243,106,.07),transparent 55%);opacity:0;transition:opacity .25s}
+.innovation-project:hover{transform:translateY(-6px);border-color:rgba(201,243,106,.45);background:#1d293a}
+.innovation-project:hover:before{opacity:1}
+.innovation-project>*{position:relative}
+.contact-card{border-radius:3px;box-shadow:0 25px 80px rgba(0,0,0,.18)}
+.contact-card h2{letter-spacing:-.075em}
+.site-footer{border-top:1px solid rgba(255,255,255,.08);margin-top:15px}
+.back-top{backdrop-filter:blur(12px)}
+/* Scroll-aware navigation and subtle pointer spotlight */
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(520px circle at var(--pointer-x,50%) var(--pointer-y,20%),rgba(201,243,106,.045),transparent 62%)}
+main,.site-header,.site-footer{position:relative;z-index:1}
+.reveal{transform:translateY(24px);transition:opacity .8s cubic-bezier(.2,.75,.25,1),transform .8s cubic-bezier(.2,.75,.25,1)}
+.reveal.is-visible{transform:translateY(0)}
+@media(max-width:900px){.hero-grid{min-height:0}.hero-visual{min-height:500px}.intro-section{padding-top:100px}.education-card{grid-template-columns:100px 1fr}.education-aside{display:none}}
+@media(max-width:700px){
+ .site-header{height:70px}
+ .hero{padding-top:50px}
+ .hero-grid{gap:30px}
+ .hero-visual{min-height:470px}
+ .hero-description{font-size:12px}
+ .intro-section{padding-top:90px}
+ .now-panel{padding:21px}
+ .metric-card{min-height:150px}
+ .tl-item:hover,.tl-item.active{padding-left:14px}
+ .education-card{grid-template-columns:74px 1fr;padding:23px 18px;gap:17px}
+ .education-emblem{width:72px;height:72px}
+ .education-copy h3{font-size:21px}
+ .education-copy p{font-size:10px}
+ .innovation-project{min-height:150px}
+ .site-footer{flex-wrap:wrap;padding-block:25px}
+}
+@media(prefers-reduced-motion:reduce){body:before{display:none}.metric-card:hover,.skill-group:hover,.innovation-project:hover{transform:none}}

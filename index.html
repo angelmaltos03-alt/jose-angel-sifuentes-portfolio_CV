@@ -334,12 +334,14 @@
     const $$=(selector,root=document)=>[...root.querySelectorAll(selector)];
     function renderExperience(){
       const root=$("#timeline");
-      root.innerHTML=experience.map((item,index)=>'<article class="job" tabindex="0" role="button" aria-expanded="false" data-job="'+index+'"><div class="job-date">'+item.date+'</div><div class="job-main">'+(item.current?'<span class="job-current">ACTUAL</span>':'')+'<h3>'+item.role+'</h3><div class="job-company">'+item.company+'</div></div><p class="job-summary">'+item.summary+'</p><button class="job-toggle" type="button" aria-label="Ver responsabilidades">＋</button><div class="job-details"><div class="job-tags">'+item.tags.map(tag=>'<span>'+tag+'</span>').join("")+'</div><ul>'+item.points.map(point=>'<li>'+point+'</li>').join("")+'</ul></div></article>').join("");
-      $$(".job",root).forEach(card=>{
-        const toggle=()=>{const open=!card.classList.contains("open");$$(".job",root).forEach(other=>{other.classList.remove("open");other.setAttribute("aria-expanded","false")});if(open){card.classList.add("open");card.setAttribute("aria-expanded","true")}};
-        card.addEventListener("click",event=>{if(event.target.closest("a"))return;toggle()});
-        card.addEventListener("keydown",event=>{if((event.key==="Enter"||event.key===" ")&&event.target===card){event.preventDefault();toggle()}});
-        $(".job-toggle",card).addEventListener("click",event=>{event.stopPropagation();toggle()});
+      root.innerHTML=experience.map((item,index)=>'<article class="job" data-job="'+index+'"><div class="job-date">'+item.date+'</div><div class="job-main">'+(item.current?'<span class="job-current">ACTUAL</span>':'')+'<h3>'+item.role+'</h3><div class="job-company">'+item.company+'</div></div><p class="job-summary">'+item.summary+'</p><button class="job-toggle" type="button" aria-expanded="false" aria-controls="job-details-'+index+'" aria-label="Ver responsabilidades de '+item.role+'">＋</button><div class="job-details" id="job-details-'+index+'"><div class="job-tags">'+item.tags.map(tag=>'<span>'+tag+'</span>').join("")+'</div><ul>'+item.points.map(point=>'<li>'+point+'</li>').join("")+'</ul></div></article>').join("");
+      $(".job",root).forEach(card=>{
+        const button=$(".job-toggle",card);
+        button.addEventListener("click",()=>{
+          const open=!card.classList.contains("open");
+          $(".job",root).forEach(other=>{other.classList.remove("open");$(".job-toggle",other).setAttribute("aria-expanded","false")});
+          if(open){card.classList.add("open");button.setAttribute("aria-expanded","true")}
+        });
       });
     }
     let activeTraining="all";

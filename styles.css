@@ -415,3 +415,12 @@ main,.site-header,.site-footer{position:relative;z-index:1}
  .site-footer{flex-wrap:wrap;padding-block:25px}
 }
 @media(prefers-reduced-motion:reduce){body:before{display:none}.metric-card:hover,.skill-group:hover,.innovation-project:hover{transform:none}}
+
+/* Official Tec Lerdo seal — visible institutional mark */
+.education-emblem{
+ width:118px!important;height:118px!important;object-fit:contain!important;
+ display:block!important;border-radius:0!important;mix-blend-mode:multiply!important;
+ background:transparent!important;box-shadow:none!important;padding:0!important;
+}
+.education-card{grid-template-columns:125px 1fr auto}
+@media(max-width:700px){.education-card{grid-template-columns:82px 1fr}.education-emblem{width:78px!important;height:78px!important}}

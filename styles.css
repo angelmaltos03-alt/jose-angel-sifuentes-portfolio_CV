@@ -502,3 +502,89 @@ main,.site-header,.site-footer{position:relative;z-index:1}
 .project-links .project-live{color:#d2caff}
 @media(max-width:700px){.projects-intro{grid-template-columns:1fr;gap:19px;margin:30px 0}.project-toolbar{align-items:flex-start;flex-direction:column}.project-grid{grid-template-columns:1fr}.project-card{min-height:0;padding:20px}.project-card-symbol{margin:19px 0 14px}.project-card h3{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.project-card:hover{transform:none}}
+
+
+/* ── Executive portfolio polish ── */
+:root{--max:1260px;--lime:#c9f36a;--ink:#0b101a;--ink-2:#121a28}
+html{scroll-padding-top:88px}
+body{font-feature-settings:"ss01" on}
+a:focus-visible,button:focus-visible,input:focus-visible,.tl-item:focus-visible{outline:2px solid var(--lime);outline-offset:4px}
+.site-header{padding-inline:max(28px,calc((100vw - var(--max))/2));}
+.main-nav a{transition:color .2s ease,opacity .2s ease}
+.main-nav a:not(.active){opacity:.84}
+.main-nav a:hover,.main-nav a.active{opacity:1}
+.hero{padding-top:clamp(58px,7vw,92px)}
+.hero-grid{grid-template-columns:minmax(0,1.06fr) minmax(360px,.84fr)}
+.hero-copy{max-width:690px}
+.hero-description{max-width:590px;font-size:14px;line-height:2.05;color:#c3cad5}
+.hero-meta{font-size:8px;letter-spacing:.12em}
+.portrait-visual{min-height:610px}
+.portrait-photo{object-position:center 24%}
+.intro-section{padding-top:clamp(105px,12vw,160px)}
+.intro-copy p{max-width:720px}
+.now-panel{grid-template-columns:190px 1fr 1fr;box-shadow:0 20px 60px rgba(0,0,0,.13)}
+.metrics-section{gap:12px}
+.metric-card{min-height:190px;padding:23px}
+.metric-label{font-size:8px;letter-spacing:.13em}
+.metrics-footnote{max-width:900px}
+.section-heading h2{max-width:600px}
+.experience-section,.credentials-section,.skills-section,.education-section,.innovation-section{scroll-margin-top:100px}
+.timeline{margin-top:12px}
+.tl-item{grid-template-columns:150px minmax(210px,.88fr) minmax(260px,1.12fr) 34px}
+.tl-role{font-size:18px}
+.tl-summary{max-width:440px}
+.tl-item:focus-visible{background:rgba(201,243,106,.055)}
+.credentials-note{max-width:980px}
+.skill-group{min-height:220px}
+.project-grid{gap:14px}
+.project-card{min-height:420px;padding:27px 28px 23px}
+.project-card h3{font-size:24px}
+.project-why{font-size:12px;line-height:1.85}
+.project-detail{font-size:11px;line-height:1.9}
+.project-tags span{font-size:8px}
+.contact-card{padding:72px 74px 42px}
+.contact-actions{gap:12px}
+.contact-details{font-size:8px}
+.site-footer{padding-block:24px}
+@media(max-width:1050px){
+ .main-nav{gap:17px}
+ .hero-grid{grid-template-columns:minmax(0,1fr) minmax(300px,.82fr);gap:32px}
+ .portrait-visual{min-height:530px}
+ .tl-item{grid-template-columns:115px minmax(170px,.9fr) minmax(210px,1.1fr) 30px;gap:15px}
+}
+@media(max-width:700px){
+ html{scroll-padding-top:76px}
+ .site-header{padding-inline:18px}
+ .main-nav a{opacity:1}
+ .hero{padding-top:48px}
+ .hero-grid{grid-template-columns:1fr;gap:28px}
+ .hero-copy{max-width:none}
+ .hero-description{font-size:12px;line-height:1.9}
+ .portrait-visual{min-height:480px;max-height:570px}
+ .intro-section{padding-top:86px}
+ .now-panel{grid-template-columns:1fr;gap:17px}
+ .metrics-section{gap:8px}
+ .metric-card{min-height:148px;padding:16px}
+ .metric-card p{font-size:7px}
+ .tl-item{grid-template-columns:1fr 32px;gap:7px 13px}
+ .tl-details{grid-column:1/3}
+ .project-card{padding:22px;min-height:0}
+ .contact-card{padding:42px 25px 28px}
+ .contact-actions .button{width:100%}
+}
+@media(max-width:420px){
+ .hero-meta{gap:10px}
+ .hero-meta span{font-size:7px}
+ .portrait-visual{min-height:420px}
+ .metric-card{padding:13px;min-height:140px}
+ .metric-card strong{font-size:36px}
+ .project-card-top{font-size:7px}
+ .project-status{max-width:46%;line-height:1.5}
+}
+@media print{
+ .project-grid{grid-template-columns:repeat(2,1fr);gap:7px}
+ .project-card{min-height:0;padding:12px;background:#fff!important;color:#111!important;break-inside:avoid}
+ .project-card h3,.project-why,.project-detail,.project-tags span,.project-links a{color:#222!important}
+ .project-card:before,.project-card-symbol{display:none}
+ .project-footnote,.metrics-footnote{color:#333!important}
+}

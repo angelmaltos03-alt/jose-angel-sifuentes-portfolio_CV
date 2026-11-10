@@ -269,3 +269,50 @@ setupFilters();
 setupNavigation();
 setupScroll();
 setupMotion();
+
+
+/* Immersive interactions: pointer light, section tracking and refined card depth */
+(function setupImmersiveExperience(){
+  const finePointer=window.matchMedia("(pointer:fine)").matches;
+  if(finePointer){
+    let frame=0;
+    document.addEventListener("pointermove",event=>{
+      if(frame)return;
+      frame=requestAnimationFrame(()=>{
+        document.body.style.setProperty("--pointer-x",event.clientX+"px");
+        document.body.style.setProperty("--pointer-y",event.clientY+"px");
+        frame=0;
+      });
+    },{passive:true});
+    const portrait=document.querySelector(".portrait-visual");
+    if(portrait){
+      portrait.addEventListener("pointermove",event=>{
+        const rect=portrait.getBoundingClientRect();
+        const x=(event.clientX-rect.left)/rect.width-.5;
+        const y=(event.clientY-rect.top)/rect.height-.5;
+        portrait.style.transform="perspective(1000px) rotateY("+(-x*3.2)+"deg) rotateX("+(y*2.5)+"deg)";
+      });
+      portrait.addEventListener("pointerleave",()=>{portrait.style.transform="";});
+    }
+  }
+  const navLinks=[...document.querySelectorAll('.main-nav a[href^="#"]')];
+  const sections=navLinks.map(link=>document.querySelector(link.getAttribute("href"))).filter(Boolean);
+  if("IntersectionObserver" in window && sections.length){
+    const sectionObserver=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        navLinks.forEach(link=>{
+          const active=link.getAttribute("href")==="#"+entry.target.id;
+          link.classList.toggle("active",active);
+          if(active)link.setAttribute("aria-current","location");
+          else link.removeAttribute("aria-current");
+        });
+      });
+    },{rootMargin:"-28% 0px -58% 0px",threshold:0});
+    sections.forEach(section=>sectionObserver.observe(section));
+  }
+  document.querySelectorAll(".metric-card,.innovation-project,.cert-card").forEach(card=>{
+    card.addEventListener("pointerenter",()=>card.classList.add("is-hovered"));
+    card.addEventListener("pointerleave",()=>card.classList.remove("is-hovered"));
+  });
+})();

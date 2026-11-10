@@ -2,30 +2,37 @@
 
 **Ingeniero Ambiental | Seguridad, Salud Ocupacional y Medio Ambiente (EHS) | Gestión ambiental | Mejora continua**
 
-Sitio profesional independiente que presenta trayectoria, formación complementaria, competencias técnicas y una selección de proyectos de ingeniería y desarrollo digital.
+Landing page profesional de una sola pieza HTML, con diseño responsive, navegación accesible, filtrado de formación y proyectos, hoja de impresión y animaciones GSAP + ScrollTrigger.
 
 ## Sitio publicado
 
 https://angelmaltos03-alt.github.io/jose-angel-sifuentes-portfolio_CV/
 
+## Archivo principal
+
+`index.html` contiene el marcado, los estilos y la lógica de interacción en un solo archivo. La fotografía del perfil está en `assets/angel-sifuentes.jpg`.
+
 ## Secciones
 
-- Perfil profesional y enfoque de trabajo.
-- Experiencia y responsabilidades por etapa.
-- Formación complementaria, con categorías y búsqueda.
-- Competencias técnicas y de gestión.
-- Formación académica.
+- Perfil y propuesta de valor profesional.
+- Experiencia laboral y responsabilidades.
+- Capacidades profesionales.
+- Formación académica y complementaria con filtros/búsqueda.
+- Metodologías y herramientas.
 - Proyectos seleccionados: SAFETYOS, NEXUS Control Tower, Sherlock Vision y Angel Dev Framework.
-- Datos de contacto y enlaces profesionales.
+- Contacto, LinkedIn y GitHub.
 
 ## Tecnologías
 
-HTML, CSS y JavaScript sin dependencias de ejecución. Diseño adaptable a escritorio y dispositivos móviles, navegación accesible, filtros interactivos, animaciones con respeto a preferencias de movimiento y hoja de impresión para guardar el perfil como PDF.
+- HTML semántico y CSS integrado.
+- Tailwind CSS Browser CDN para utilidades y prototipado en navegador.
+- GSAP 3.15 y ScrollTrigger para animaciones basadas en scroll.
+- JavaScript nativo para filtros, acordeones, navegación y vista de impresión.
 
 ## Publicación
 
 GitHub Pages desde la rama `main`, directorio raíz `/`.
 
-## Alcance y transparencia
+## Transparencia del contenido
 
-Los indicadores de NEXUS son escenarios simulados para demostración. Algunas funciones de Sherlock Vision dependen de credenciales y servicios externos. Los registros de formación se presentan como formación complementaria y no implican que todos sean certificaciones vigentes.
+Los escenarios e indicadores de NEXUS son simulados para demostración. Algunas funciones de Sherlock Vision dependen de credenciales y servicios externos. Los registros de formación se muestran como formación complementaria y no implican que todos sean certificaciones vigentes.

@@ -308,14 +308,16 @@ button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid var(-
   <div class="field-map-layout">
     <div class="field-map-frame"><div id="fieldMap" role="application" aria-label="Mapa interactivo de proyectos y regiones de participación"></div><div class="map-disclaimer">UBICACIONES MUNICIPALES / REFERENCIA PÚBLICA · NO SON COORDENADAS DE INSTALACIONES</div></div>
     <aside class="field-map-list">
-      <div class="map-list-head"><span>REGIONES IDENTIFICADAS</span><b>07</b></div>
+      <div class="map-list-head"><span>REGIONES Y PROYECTOS IDENTIFICADOS</span><b>09</b></div>
       <button class="map-place" type="button" data-map="torreon"><span class="map-index">01</span><span><b>Torreón · Coahuila</b><small>Met-Mex / Refinería · Fertirey · Cuarto de Oro · paro de planta</small></span><i>↗</i></button>
       <button class="map-place" type="button" data-map="gomez"><span class="map-index">02</span><span><b>Gómez Palacio · Durango</b><small>SHIRO / Toyan · edificación del templo de La Iglesia de Jesucristo de los Santos de los Últimos Días · Grupo Hidalgo / Vega Arquitectos / Walmart / Rotoplas · Bodega Aurrerá Blvd. El Refugio y PTAR</small></span><i>↗</i></button>
-      <button class="map-place" type="button" data-map="cienega"><span class="map-index">03</span><span><b>Santiago Papasquiaro · Durango</b><small>La Ciénega · San Ramón · Taspana</small></span><i>↗</i></button>
-      <button class="map-place" type="button" data-map="sanjulian"><span class="map-index">04</span><span><b>Guadalupe y Calvo · Chihuahua</b><small>San Julián · participación en proyecto</small></span><i>↗</i></button>
-      <button class="map-place" type="button" data-map="fresnillo"><span class="map-index">05</span><span><b>Fresnillo · Zacatecas</b><small>Juanicipio · participación en proyecto</small></span><i>↗</i></button>
-      <button class="map-place" type="button" data-map="caborca"><span class="map-index">06</span><span><b>Caborca · Sonora</b><small>Proyectos / servicios en la región</small></span><i>↗</i></button>
-      <button class="map-place" type="button" data-map="tecolotlan"><span class="map-index">07</span><span><b>Tecolotlán · Jalisco</b><small>Calidra del Occidente</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="cienega"><span class="map-index">03</span><span><b>Santiago Papasquiaro · Durango</b><small>Proyecto minero La Ciénega · San Ramón · Taspana</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="sanjulian"><span class="map-index">04</span><span><b>Guadalupe y Calvo · Chihuahua</b><small>Proyecto minero San Julián</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="fresnillo"><span class="map-index">05</span><span><b>Fresnillo · Zacatecas</b><small>Proyecto minero Juanicipio · Fresnillo plc</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="caborca"><span class="map-index">06</span><span><b>Caborca · Sonora</b><small>Proyecto minero La Herradura · Minera Penmont / Fresnillo plc</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="penasquito"><span class="map-index">07</span><span><b>Mazapil · Zacatecas</b><small>Proyecto minero Peñasquito · Newmont</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="velardena"><span class="map-index">08</span><span><b>Velardeña · Durango</b><small>Proyecto en mina Velardeña · participación con Candube</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="tecolotlan"><span class="map-index">09</span><span><b>Tecolotlán · Jalisco</b><small>Proyecto en la región Occidente · Calidra del Occidente</small></span><i>↗</i></button>
       <p class="map-note">La ubicación de cada marcador se aproxima al centro urbano o municipal. No se publica la localización exacta de minas, plantas ni áreas restringidas.</p>
     </aside>
   </div>
@@ -560,11 +562,13 @@ function setupFieldMap(){
  const places={
   torreon:{coords:[25.5428,-103.4068],title:"Torreón · Coahuila",detail:"Met-Mex / Refinería, Fertirey y Cuarto de Oro; participación en paro de planta en Torreón."},
   gomez:{coords:[25.5698,-103.4957],title:"Gómez Palacio · Durango",detail:"SHIRO / Toyan: edificación del templo de La Iglesia de Jesucristo de los Santos de los Últimos Días. Grupo Hidalgo / Vega Arquitectos / Walmart / Rotoplas: edificación de Bodega Aurrerá Blvd. El Refugio y PTAR de la bodega."},
-  cienega:{coords:[25.0375,-105.4194],title:"Santiago Papasquiaro · Durango",detail:"Región de La Ciénega; referencias de San Ramón y Taspana. Marcador municipal aproximado."},
-  sanjulian:{coords:[26.0958,-106.9636],title:"Guadalupe y Calvo · Chihuahua",detail:"Mina San Julián. Participación en proyecto; no corresponde al paro de planta."},
-  fresnillo:{coords:[23.1744,-102.8671],title:"Fresnillo · Zacatecas",detail:"Distrito minero de Fresnillo / Juanicipio."},
-  caborca:{coords:[30.7182,-112.1582],title:"Caborca · Sonora",detail:"Región de proyectos y servicios. Falta precisar el sitio concreto."},
-  tecolotlan:{coords:[20.215,-104.05],title:"Tecolotlán · Jalisco",detail:"Calidra del Occidente."}
+  cienega:{coords:[25.0375,-105.4194],title:"Proyecto minero La Ciénega · Santiago Papasquiaro, Durango",detail:"Participación en proyecto minero La Ciénega; referencias regionales de San Ramón y Taspana."},
+  sanjulian:{coords:[26.0958,-106.9636],title:"Proyecto minero San Julián · Guadalupe y Calvo, Chihuahua",detail:"Participación en proyecto minero San Julián. El paro de planta corresponde a Torreón, no a esta región."},
+  fresnillo:{coords:[23.1744,-102.8671],title:"Proyecto minero Juanicipio · Fresnillo, Zacatecas",detail:"Participación en proyecto minero Juanicipio, operación de Fresnillo plc."},
+  caborca:{coords:[30.7182,-112.1582],title:"Proyecto minero La Herradura · Caborca, Sonora",detail:"Participación en proyecto minero La Herradura, operado por Minera Penmont, subsidiaria de Fresnillo plc."},
+  penasquito:{coords:[24.6453,-101.6553],title:"Proyecto minero Peñasquito · Mazapil, Zacatecas",detail:"Participación en proyecto minero Peñasquito, operación de Newmont."},
+  velardena:{coords:[25.016,-103.73],title:"Mina Velardeña · Cuencamé, Durango",detail:"Participación en proyecto en la mina Velardeña con Candube. La operación minera de Velardeña está identificada por Industrias Peñoles."},
+  tecolotlan:{coords:[20.215,-104.05],title:"Tecolotlán · Jalisco",detail:"Proyecto en la región Occidente · Calidra del Occidente."}
  };
  const markers={};
  Object.entries(places).forEach(([id,p])=>{markers[id]=L.marker(p.coords).addTo(map).bindPopup("<b>"+p.title+"</b><br>"+p.detail)});

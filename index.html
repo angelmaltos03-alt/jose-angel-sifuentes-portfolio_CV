@@ -42,6 +42,22 @@
 @media(max-width:420px){.hero h1{font-size:clamp(3.15rem,15vw,4.8rem)}.hero-actions{flex-direction:column;align-items:stretch}.hero-actions .button{width:100%}.hero-visual{height:113vw;min-height:370px}.metric{padding:13px 10px}.metric strong{font-size:2.25rem}.learning-grid{grid-template-columns:1fr}.project-links{gap:11px}.contact-card{padding:38px 21px 25px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.ticker-track{animation:none}}
 @media print{body{background:white!important;color:#111!important}.header,.progress,.hero-actions,.back-top,.filters,.project-filters,.ticker{display:none!important}.shell{width:100%;max-width:none}.hero{padding:20px 0;min-height:0}.hero-grid{grid-template-columns:1fr 200px;gap:20px}.hero h1{font-size:34pt;color:#111}.hero h1 span,.hero-statement,.heading-title span{color:#333}.hero-visual{height:260px;min-height:260px;border-radius:15px;box-shadow:none}.profile,.experience,.capabilities,.learning,.skills,.projects,.contact{padding:22px 0}.section-light,.section-dark{background:white!important;color:#111!important}.profile-copy p,.job-summary,.job-details li,.cap-card p,.learning-item strong,.project-copy p{color:#333}.now-strip,.job,.cap-card,.learning-item,.skill-card,.project-visual{background:white!important;color:#111!important;border:1px solid #ccc;break-inside:avoid}.job{grid-template-columns:80px 1fr 1fr 0;padding:8px}.job-details{display:block!important;grid-column:2/4}.job-toggle{display:none}.metric-grid{grid-template-columns:repeat(4,1fr)}.metric{min-height:75px;padding:8px;background:white}.metric strong,.metric p,.metric small{color:#111}.learning-grid{grid-template-columns:repeat(3,1fr)}.project-showcase,.project-showcase:nth-child(even){grid-template-columns:1fr 1fr;padding:15px 0}.contact-card{background:white!important;color:#111!important;border:1px solid #aaa;padding:20px}.contact-card h2,.contact-card p,.contact-details{color:#111!important}.footer{min-height:0}}
+
+/* Colaboración en proyectos de construcción */
+.construction-partners{margin-top:64px;padding:34px 0 0;border-top:1px solid #33383c}
+.partners-heading{display:grid;grid-template-columns:1fr minmax(260px,.7fr);gap:12px 44px;align-items:end}
+.partners-heading .section-label{grid-column:1/-1;margin-bottom:2px}
+.partners-heading h3{margin:0;font:600 clamp(28px,4vw,46px)/1.02 var(--display);letter-spacing:-.065em}
+.partners-heading h3 span{color:#89939a}
+.partners-heading>p:last-child{max-width:430px;margin:0;color:#a3abb0;font-size:11px;line-height:1.9}
+.partner-list{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin-top:28px}
+.partner-chip{min-height:105px;padding:17px 14px;border:1px solid #343b40;background:rgba(255,255,255,.025);display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+.partner-chip b{font:600 11px/1.4 var(--display);letter-spacing:.035em;color:#f1f3f4}
+.partner-chip small{font:8px/1.6 var(--mono);color:#929ca2}
+.partners-note{margin:15px 0 0;color:#747f85;font-size:9px;line-height:1.7}
+.metric-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:900px){.partner-list{grid-template-columns:repeat(3,minmax(0,1fr))}.metric-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.partners-heading{grid-template-columns:1fr;gap:15px}.partner-list{grid-template-columns:repeat(2,minmax(0,1fr))}.partner-chip{min-height:88px;padding:14px 12px}.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{padding:18px 14px;min-height:125px}.metric:nth-child(2n){border-right:0}.metric:first-child{padding-left:14px}}
 </style>
 </head>
 <body>
@@ -87,6 +103,7 @@
 <div class="metric-grid">
 <div class="metric reveal-up"><small>Trayectoria EHS / MA</small><strong>4+</strong><p>Años de experiencia<br>en el área</p></div>
 <div class="metric reveal-up"><small>Competencias</small><strong>05</strong><p>Áreas técnicas<br>de trabajo</p></div>
+<div class="metric reveal-up"><small>Servicios de alimentación</small><strong>35</strong><p>Comedores industriales<br>en operación atendidos</p></div>
 <div class="metric reveal-up"><small>Formación</small><strong id="courseMetric">39</strong><p>Registros complementarios<br>compartidos</p></div>
 <div class="metric reveal-up"><small>Proyectos</small><strong>04</strong><p>Desarrollos<br>seleccionados</p></div>
 </div>
@@ -96,6 +113,21 @@
 <section class="experience section-dark" id="experiencia"><div class="shell">
 <div class="section-heading reveal-left"><div><p class="section-label"><b>02 /</b> Experiencia profesional</p><h2 class="heading-title">El trabajo se demuestra<br><span>en la operación.</span></h2></div><p class="heading-intro">Responsabilidades y contribuciones en seguridad, salud ocupacional, medio ambiente y coordinación operativa. Selecciona cada etapa para consultar sus funciones.</p></div>
 <div class="timeline" id="timeline"></div>
+<div class="construction-partners reveal-up">
+  <div class="partners-heading">
+    <p class="section-label"><b>CAMPO /</b> Colaboración interempresarial</p>
+    <h3>Proyectos de construcción.<br><span>Trabajo coordinado en campo.</span></h3>
+    <p>Participación y colaboración en proyectos de construcción y obra, trabajando de la mano con distintas empresas y equipos de proyecto.</p>
+  </div>
+  <div class="partner-list" aria-label="Empresas colaboradoras en proyectos de construcción">
+    <span class="partner-chip"><b>SHIRO</b><small>Ciro Soluciones Inteligentes</small></span>
+    <span class="partner-chip"><b>TOYAN</b><small>Colaboración en proyectos</small></span>
+    <span class="partner-chip"><b>GRUPO HIDALGO</b><small>Terracerías</small></span>
+    <span class="partner-chip"><b>ARQUITECTOS VEGA</b><small>Proyectos de construcción</small></span>
+    <span class="partner-chip"><b>GRUPO WALMART</b><small>Proyectos y servicios</small></span>
+  </div>
+  <p class="partners-note">Empresas colaboradoras mencionadas como parte de la experiencia en proyectos; esta sección no implica relación laboral directa con cada una.</p>
+</div>
 </div></section>
 
 <section class="capabilities section-light" id="capacidades"><div class="shell">

@@ -14,6 +14,7 @@
 <link rel="canonical" href="https://angelmaltos03-alt.github.io/jose-angel-sifuentes-portfolio_CV/">
 <title>José Ángel Sifuentes Maltos — Ingeniería Ambiental & EHS</title>
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -58,6 +59,11 @@
 .metric-grid{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:900px){.partner-list{grid-template-columns:repeat(3,minmax(0,1fr))}.metric-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:700px){.partners-heading{grid-template-columns:1fr;gap:15px}.partner-list{grid-template-columns:repeat(2,minmax(0,1fr))}.partner-chip{min-height:88px;padding:14px 12px}.metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.metric{padding:18px 14px;min-height:125px}.metric:nth-child(2n){border-right:0}.metric:first-child{padding-left:14px}}
+
+.field-map-section{padding:135px 0 145px;background:#0b0e10}.field-map-layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,.8fr);gap:16px;align-items:stretch}.field-map-frame{position:relative;min-height:620px;border:1px solid #30393d;border-radius:5px;overflow:hidden;background:#13191c}.field-map-frame #fieldMap{height:620px;width:100%;background:#151c20}.map-disclaimer{position:absolute;z-index:500;left:13px;bottom:13px;padding:9px 11px;background:rgba(7,10,11,.88);border:1px solid #485156;color:#c2cbcc;font:7px var(--mono);letter-spacing:.09em}.field-map-list{border:1px solid #30393d;background:#111619;padding:18px 18px 10px}.map-list-head{display:flex;justify-content:space-between;padding:2px 0 15px;color:#aeb8bb;font:8px var(--mono);letter-spacing:.12em}.map-list-head b{color:var(--acid);font-size:13px}.map-place{display:flex;width:100%;gap:12px;align-items:center;padding:15px 2px;border:0;border-top:1px solid #2c3539;background:transparent;text-align:left;cursor:pointer}.map-place:hover,.map-place.active{background:rgba(212,251,88,.06)}.map-index{color:var(--acid);font:8px var(--mono)}.map-place span:nth-child(2){flex:1}.map-place b{display:block;color:#edf0eb;font:600 11px var(--display)}.map-place small{display:block;margin-top:4px;color:#8d999e;font-size:9px;line-height:1.5}.map-place i{color:#9da8ad;font-style:normal}.map-note{margin:16px 0;color:#77848a;font:8px/1.8 var(--mono)}.map-pending{margin-top:15px;padding:17px 19px;border:1px solid #384247;color:#aeb9bd;font-size:10px;line-height:1.8}.map-pending b{color:var(--acid)}.leaflet-container{font-family:var(--body)}.leaflet-popup-content-wrapper,.leaflet-popup-tip{background:#111719;color:#f1f3ee}.leaflet-popup-content{font:11px/1.6 var(--body)}.leaflet-popup-content b{color:var(--acid)}.leaflet-control-attribution{font-size:8px!important}
+@media(max-width:900px){.field-map-layout{grid-template-columns:1fr}.field-map-frame,.field-map-frame #fieldMap{min-height:470px;height:470px}.field-map-list{display:grid;grid-template-columns:1fr 1fr;column-gap:12px}.map-list-head,.map-note{grid-column:1/-1}}
+@media(max-width:600px){.field-map-section{padding:90px 0}.field-map-frame,.field-map-frame #fieldMap{min-height:390px;height:390px}.field-map-list{grid-template-columns:1fr;padding:14px}.map-list-head,.map-note{grid-column:auto}.map-disclaimer{font-size:6px;max-width:calc(100% - 26px);line-height:1.5}}
+
 </style>
 </head>
 <body>
@@ -66,7 +72,7 @@
 <header class="header"><div class="shell header-inner">
 <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-mark">JA.</span><span class="brand-name">JOSÉ ÁNGEL SIFUENTES<small>INGENIERÍA · EHS · GESTIÓN</small></span></a>
 <button class="menu" id="menu" type="button" aria-label="Abrir menú" aria-controls="navigation" aria-expanded="false"><span></span><span></span></button>
-<nav class="nav" id="navigation" aria-label="Navegación"><a href="#perfil">Perfil</a><a href="#experiencia">Experiencia</a><a href="#capacidades">Capacidades</a><a href="#formacion">Formación</a><a href="#proyectos">Proyectos</a><a class="contact-link" href="#contacto">Hablemos ↗</a></nav>
+<nav class="nav" id="navigation" aria-label="Navegación"><a href="#perfil">Perfil</a><a href="#experiencia">Experiencia</a><a href="#trayectoria-mapa">Mapa de proyectos</a><a href="#capacidades">Capacidades</a><a href="#formacion">Formación</a><a href="#proyectos">Proyectos</a><a class="contact-link" href="#contacto">Hablemos ↗</a></nav>
 </div></header>
 <main id="main">
 <section class="hero shell" id="inicio">
@@ -130,6 +136,26 @@
 </div>
 </div></section>
 
+
+<section class="field-map-section section-dark" id="trayectoria-mapa"><div class="shell">
+  <div class="section-heading reveal-left"><div><p class="section-label"><b>CAMPO /</b> Trayectoria geográfica</p><h2 class="heading-title">Proyectos en territorio.<br><span>Experiencia que se mueve.</span></h2></div><p class="heading-intro">Mapa de referencia con las regiones y ciudades asociadas a proyectos y operaciones en los que has mencionado participación. Los marcadores son aproximados y no representan accesos ni coordenadas de instalaciones.</p></div>
+  <div class="field-map-layout">
+    <div class="field-map-frame"><div id="fieldMap" role="application" aria-label="Mapa interactivo de proyectos y regiones de participación"></div><div class="map-disclaimer">UBICACIONES MUNICIPALES / REFERENCIA PÚBLICA · NO SON COORDENADAS DE INSTALACIONES</div></div>
+    <aside class="field-map-list">
+      <div class="map-list-head"><span>REGIONES IDENTIFICADAS</span><b>07</b></div>
+      <button class="map-place" type="button" data-map="torreon"><span class="map-index">01</span><span><b>Torreón · Coahuila</b><small>Met-Mex / Refinería · Fertirey · Cuarto de Oro (por confirmar)</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="lerdo"><span class="map-index">02</span><span><b>Lerdo · Durango</b><small>Yura Corporation · Planta Lerdo</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="cienega"><span class="map-index">03</span><span><b>Santiago Papasquiaro · Durango</b><small>La Ciénega · San Ramón · Taspana</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="sanjulian"><span class="map-index">04</span><span><b>Guadalupe y Calvo · Chihuahua</b><small>San Julián · participación en proyecto / paro de planta</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="fresnillo"><span class="map-index">05</span><span><b>Fresnillo · Zacatecas</b><small>Juanicipio · participación en proyecto</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="caborca"><span class="map-index">06</span><span><b>Caborca · Sonora</b><small>Proyectos / servicios en la región</small></span><i>↗</i></button>
+      <button class="map-place" type="button" data-map="tecolotlan"><span class="map-index">07</span><span><b>Tecolotlán · Jalisco</b><small>Calidra del Occidente</small></span><i>↗</i></button>
+      <p class="map-note">La ubicación de cada marcador se aproxima al centro urbano o municipal. No se publica la localización exacta de minas, plantas ni áreas restringidas.</p>
+    </aside>
+  </div>
+  <div class="map-pending"><b>Por ubicar antes de publicar:</b> Montiac Linamar, Clarios, “San Luis” y la ubicación exacta de otros proyectos de obra (SHIRO, Toyan, Grupo Hidalgo, Arquitectos Vega y Grupo Walmart). No los coloqué al azar.</div>
+</div></section>
+
 <section class="capabilities section-light" id="capacidades"><div class="shell">
 <div class="cap-intro reveal-left"><div><p class="section-label"><b>03 /</b> Capacidades profesionales</p><h2 class="heading-title">Pensamiento técnico.<br><span>Impacto en campo.</span></h2></div><p class="heading-intro">Competencias organizadas alrededor de los problemas que ayudan a resolver dentro de una operación.</p></div>
 <div class="cap-bento">
@@ -185,6 +211,7 @@
 </main>
 <footer class="footer shell"><span>JOSÉ ÁNGEL SIFUENTES MALTOS</span><span>INGENIERÍA AMBIENTAL · EHS · GESTIÓN</span><span>© <span id="year">2026</span></span></footer>
 <button class="back-top" id="backTop" type="button" aria-label="Volver al inicio">↑</button>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.15.0/dist/ScrollTrigger.min.js"></script>
 <script>
@@ -359,6 +386,26 @@ function setupFilters(){
  $("#trainingSearch").addEventListener("input",renderTraining);
  $("#projectFilters").addEventListener("click",event=>{const button=event.target.closest("[data-project]");if(!button)return;const selected=button.dataset.project;$$("[data-project]",$("#projectFilters")).forEach(node=>{const active=node===button;node.classList.toggle("active",active);node.setAttribute("aria-pressed",String(active))});$$("[data-category]",$("#projects")).forEach(card=>card.hidden=selected!=="all"&&card.dataset.category!==selected);const visible=$$("[data-category]",$("#projects")).filter(card=>!card.hidden).length;$("#projectCount").textContent=String(visible).padStart(2,"0")+" proyectos seleccionados"});
 }
+
+function setupFieldMap(){
+ const root=$("#fieldMap");if(!root||!window.L)return;
+ const map=L.map(root,{scrollWheelZoom:false}).setView([25.1,-103.8],5);
+ L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",{maxZoom:18,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
+ const places={
+  torreon:{coords:[25.5428,-103.4068],title:"Torreón · Coahuila",detail:"Met-Mex / Refinería y Fertirey. Cuarto de Oro queda pendiente de confirmar."},
+  lerdo:{coords:[25.5372,-103.5246],title:"Lerdo · Durango",detail:"Yura Corporation · Planta Lerdo."},
+  cienega:{coords:[25.0375,-105.4194],title:"Santiago Papasquiaro · Durango",detail:"Región de La Ciénega; referencias de San Ramón y Taspana. Marcador municipal aproximado."},
+  sanjulian:{coords:[26.0958,-106.9636],title:"Guadalupe y Calvo · Chihuahua",detail:"Mina San Julián. Referencia municipal pública; no es la ubicación de la instalación."},
+  fresnillo:{coords:[23.1744,-102.8671],title:"Fresnillo · Zacatecas",detail:"Distrito minero de Fresnillo / Juanicipio."},
+  caborca:{coords:[30.7182,-112.1582],title:"Caborca · Sonora",detail:"Región de proyectos y servicios. Falta precisar el sitio concreto."},
+  tecolotlan:{coords:[20.215,-104.05],title:"Tecolotlán · Jalisco",detail:"Calidra del Occidente."}
+ };
+ const markers={};
+ Object.entries(places).forEach(([id,p])=>{markers[id]=L.marker(p.coords).addTo(map).bindPopup("<b>"+p.title+"</b><br>"+p.detail)});
+ $("[data-map]").forEach(btn=>btn.addEventListener("click",()=>{const id=btn.dataset.map,p=places[id];if(!p)return;$("[data-map]").forEach(x=>x.classList.toggle("active",x===btn));map.flyTo(p.coords,9,{duration:.7});markers[id].openPopup()}));
+ setTimeout(()=>map.invalidateSize(),250);
+}
+
 function setupNavigation(){
  const button=$("#menu"),nav=$("#navigation");const close=()=>{nav.classList.remove("open");button.setAttribute("aria-expanded","false");document.body.classList.remove("menu-open")};
  button.addEventListener("click",()=>{const open=button.getAttribute("aria-expanded")!=="true";button.setAttribute("aria-expanded",String(open));nav.classList.toggle("open",open);document.body.classList.toggle("menu-open",open)});
@@ -383,7 +430,7 @@ function setupMotion(){
 }
 $("#print").addEventListener("click",()=>window.print());
 $("#year").textContent=new Date().getFullYear();
-renderExperience();renderTraining();renderSkills();setupFilters();setupNavigation();setupUI();
+renderExperience();renderTraining();renderSkills();setupFilters();setupNavigation();setupUI();setupFieldMap();
 if(document.readyState==="complete")setupMotion();else addEventListener("load",setupMotion,{once:true});
 </script>
 </body>
